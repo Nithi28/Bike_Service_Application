@@ -37,6 +37,7 @@ class RegisteredUserController extends Controller
             'phone' => [
                 'required',
                 'regex:/^\d{3}-?\d{3}-?\d{4}$/',
+                           'unique:'.User::class,
             ],
         ]);
 
